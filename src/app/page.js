@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 import { useRouter } from 'next/navigation';
 import { buscaPesquisa, buscaTodos } from '@/model/produtos';
+import Produto from '@/components/Produto';
 
 export default function Home( props ) {
 
@@ -40,12 +41,10 @@ export default function Home( props ) {
 
             {
                 produtos.map( produto =>
-                    <div key={produto.id} onClick={()=>router.push("/produto/"+produto.id)} >
+                    <>
                         <hr/>
-                        <img src={ produto.imagem } width={200} />
-                        <p> { produto.nome } </p>
-                        <p> { produto.preco } </p>
-                    </div>
+                        <Produto produto={produto} />
+                    </>
                 )
             }
 

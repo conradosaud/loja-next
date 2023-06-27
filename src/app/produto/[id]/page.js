@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 //import axios from 'axios'
 import { busca } from '@/model/produtos'
 import Link from 'next/link'
+import Produto from '@/components/Produto'
 
 const ProdutoID = ( props ) => {
 
@@ -65,12 +66,10 @@ const ProdutoID = ( props ) => {
             { 
                 produto == null ? <h1> Este produto não existe </h1>: 
                 <div>
-                    <h1> { produto.nome } </h1>
-                    <p> { produto.descricao } </p>
-                    <p> { produto.preco } </p>
-                    <img src={ produto.imagem } width={350} />
+                    <Produto produto={produto} clicavel={false} largura={350} />
 
                     <br/>
+                    
                     <label>
                         Quantidade
                         <input type="number" min={1} value={quantidade} onChange={(e)=>adicionaProduto(e.target.value)} />

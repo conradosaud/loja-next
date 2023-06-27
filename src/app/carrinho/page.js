@@ -3,6 +3,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { UsuarioContext } from '@/context/UsuarioContext';
 import { buscaLista } from '@/model/produtos';
 import { useRouter } from 'next/navigation';
+import Produto from '@/components/Produto';
 
 const Carrinho = () => {
 
@@ -90,14 +91,10 @@ const Carrinho = () => {
                 {
                     produtos == 0 ? <p> Seu carrinho está vazio... </p> :
                     produtos.map( item =>
-                            <div key={item.id}>
-                            <h1> { item.nome } </h1>
-                            <p> Preço: { item.preco } </p>
-                            <p> Quantidade: { carrinho.map( i => i.id == item.id ? i.quantidade : null ) } </p>
-                            <p> Total: R$ { carrinho.map( i => i.id == item.id ? i.quantidade * item.preco : null ) } </p>
-                            <img src={item.imagem} width={150} />
+                        <>
+                            <Produto produto={item} largura={150} />
                             <hr/>
-                        </div>
+                        </>
                     )
                 }
             </div>
