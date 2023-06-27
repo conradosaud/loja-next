@@ -1,13 +1,9 @@
 
-import { Inter } from 'next/font/google'
-
 import { UsuarioProvider } from '@/context/UsuarioContext'
 
 import Menu from '@/components/Menu'
 import Pesquisa from '@/components/Pesquisa'
 import Rodape from '@/components/Rodape'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Conradito Store',
@@ -17,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="pt-BR">
-            <body className={inter.className}>
+            <body>
 
                 <UsuarioProvider>
                     <Menu />

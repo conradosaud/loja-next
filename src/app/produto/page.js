@@ -6,8 +6,8 @@ import { notFound, redirect, useRouter } from 'next/navigation'
 const Produto = () => {
 
   //notFound();               // Emite o erro 404
-  redirect('/');            // Redireciona diretamente para outra página ou site
-  //const router = useRouter(); // Permite tratamentos dentro do código
+  redirect('/');            // usado fora de componentes
+  //const router = useRouter(); // Permite tratamentos dentro do código, usado dentro de componentes
   //router.push("/")
 
   return (
