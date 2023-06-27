@@ -11,3 +11,7 @@ export async function busca( id ){
 export async function buscaLista( lista ){
     return await supabase.from("produtos").select().in("id", lista );
 }
+
+export async function buscaPesquisa( pesquisa ){
+    return await supabase.from("produtos").select().like("nome", "%"+pesquisa+"%" );
+}

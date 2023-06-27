@@ -1,11 +1,9 @@
 const { default: supabase } = require("./supabase");
 
-async function insere( email, senha ){
-    resposta = await supabase.from("usuarios").insert({ email: email, senha: senha });
-    return resposta
+export async function insere( nome, email, senha ){
+    return await supabase.from("usuarios").insert({ nome: nome, email: email, senha: senha });
 }
 
-async function autentica( email, senha ){
-    resposta = await supabase.from("usuarios").select().eq('email', email, 'senha', senha);
-    return resposta
+export async function autentica( email, senha ){
+    return await supabase.from("usuarios").select().match({email: email, senha: senha});
 }

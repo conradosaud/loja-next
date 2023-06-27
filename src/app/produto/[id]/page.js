@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 //import axios from 'axios'
 import { busca } from '@/model/produtos'
+import Link from 'next/link'
 
 const ProdutoID = ( props ) => {
 
@@ -26,8 +27,20 @@ const ProdutoID = ( props ) => {
         }
 
         const item = { id: produto.id, quantidade: quantidade }; // cria o item que será adicionado
-        //carrinho = carrinho.map( produto => produto.id == item.id ? {...produto, quantidade: produto.quantidade+item.quantidade } : produto )
-        carrinho.push(item); // adiciona objeto do carrinho que agora está convertido em javascript
+
+        // Lógica para verificar se um item já existe para acrescentar a quantidade invés de adicionar um repetido no array
+        let itemExistente = false;
+        carrinho.forEach( produto => {
+            if( produto.id == item.id ){
+                itemExistente = true;
+                produto.quantidade += parseInt(item.quantidade)
+            }
+        })
+        if( itemExistente == false ){
+            carrinho.push(item); // adiciona objeto do carrinho que agora está convertido em javascript
+        }
+
+        alert("Produto adicionado com sucesso!")
         
         carrinho = JSON.stringify(carrinho) // converte o carrinho em string para armazenar no localstorage
         localStorage.setItem("carrinho", carrinho)
@@ -46,13 +59,16 @@ const ProdutoID = ( props ) => {
 
     return (
         <div>
+
+            <Link href="/"> Voltar </Link>
+
             { 
                 produto == null ? <h1> Este produto não existe </h1>: 
                 <div>
                     <h1> { produto.nome } </h1>
                     <p> { produto.descricao } </p>
                     <p> { produto.preco } </p>
-                    <img src={ produto.imagem } />
+                    <img src={ produto.imagem } width={350} />
 
                     <br/>
                     <label>
