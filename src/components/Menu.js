@@ -25,7 +25,7 @@ function Menu() {
             </ul>
         </div>
         <div>
-            Conradito Blog
+            Conradito Store
         </div>
     </nav>
   )
