@@ -68,7 +68,9 @@ Em resumo, o Next.js é um framework prático e poderoso que oferece recursos av
 
 ### Iniciando um novo projeto
 Para começar um projeto em NextJS, execute o seguinte comando no local que você quer iniciar seu novo projeto:
+
     npx create-next-app
+    
 É recomendável que use o _CMD_ do Windows ou o terminal do seu novo projeto. O _GitBash_ tem problemas em configurar as perguntas que vem a seguir.
 Em seguida, algumas perguntas irão aparecer para você responder e configurar seu projeto em Next, são elas (traduzido):
 - _Qual o nome do seu projeto?_ ``./`` para criar um projeto no mesmo local ou digite o nome do projeto que será criado
