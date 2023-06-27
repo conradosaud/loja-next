@@ -82,7 +82,9 @@ Em seguida, algumas perguntas irão aparecer para você responder e configurar s
 Feito isso, seu projeto em NextJS será instalado. Basta aguardar.
 
 Após instalado, você pode testar rodar a aplicação de demonstração usando o comando:
+
 ```npm run dev```
+
 Lembrando que no Next também tem o comando ``npm start`` como faziamos no React, no entanto, este comando no Next serve para rodar o aplicativo na versão de produção, e não de desenvolvimento, então use ``npm run dev`` sempre.
 
 _Continua..._
