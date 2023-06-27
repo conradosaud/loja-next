@@ -72,14 +72,14 @@ Para começar um projeto em NextJS, execute o seguinte comando no local que voc�
     npx create-next-app
 
 É recomendável que use o _CMD_ do Windows ou o terminal do seu novo projeto. O _GitBash_ tem problemas em configurar as perguntas que vem a seguir.
-Em seguida, algumas perguntas irão aparecer para você responder e configurar seu projeto em Next, são elas (traduzido):
+Em seguida, algumas perguntas irão aparecer para você responder e configurar seu projeto em Next, são elas (__traduzido__):
 - ``Qual o nome do seu projeto?`` Digite ``./`` para criar um projeto no mesmo local ou digite o nome do projeto que será criado
-- ``Gostaria de usar __TypeScript__?`` escolha ``No``, este repositório de tutorial usa JavaScript invés de TypeScript.
-- ``Gostaria de usar __ESLint__?`` escolha ``No``, estamos visando simplificar o aprendizado em Next.
-- ``Gostaria de usar __Tailwind CSS__?`` escolha ``Yes``, pois vamos usar o _Tailwind_ para estilizar o site no final (está em outra branch)
-- ``Gostaria de usar __src/directory__?`` escolha ``Yes``, vamos manter a estrutura padrão do React
-- ``Usar o __App Router__?`` escolha ``Yes``, ele é o recurso mais recente implementado no Next 13
-- ``Gostaria de customizar o padrão de __import alias__?`` escolha ``No``, vamos entender o que é isso mais tarde
+- ``Gostaria de usar TypeScript?`` escolha ``No``, este repositório de tutorial usa JavaScript invés de TypeScript.
+- ``Gostaria de usar ESLint?`` escolha ``No``, estamos visando simplificar o aprendizado em Next.
+- ``Gostaria de usar Tailwind CSS?`` escolha ``Yes``, pois vamos usar o _Tailwind_ para estilizar o site no final (está em outra branch)
+- ``Gostaria de usar src/directory?`` escolha ``Yes``, vamos manter a estrutura padrão do React
+- ``Usar o App Router?`` escolha ``Yes``, ele é o recurso mais recente implementado no Next 13
+- ``Gostaria de customizar o padrão de import alias?`` escolha ``No``, vamos entender o que é isso mais tarde
 
 Feito isso, seu projeto em NextJS será instalado. Basta aguardar.
 
