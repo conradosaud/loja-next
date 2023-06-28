@@ -2,8 +2,7 @@ import React from 'react'
 
 const Rodape = () => {
   return (
-    <footer style={{position:"fixed", width: "90%", bottom: 0}}>
-        <hr/>
+    <footer className='bg-gray-700 text-white sticky top-[100vh] p-3 text-center italic mt-20'>
         Conradito Store
     </footer>
   )
